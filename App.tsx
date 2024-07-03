@@ -12,7 +12,7 @@ export default function App() {
   }
   return (
     <ImageBackground source={require("./assets/app/light-bg.png")} style={{ flex: 1 }}>
-
+      <StatusBar style='auto' />
     </ImageBackground>
   );
 }
