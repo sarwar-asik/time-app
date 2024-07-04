@@ -37,12 +37,11 @@ function TopSection() {
 
 
 function BottomSection() {
-
     return (
         <View style={style.bottomContainer}>
             <View style={{ flexDirection: "row", alignItems: "center", gap: 5, marginBottom: 5, paddingHorizontal: 10 }}>
                 <Image source={require("../assets/app/sun.png")} />
-                <Text style={{ fontSize: 20, color: "white", fontFamily: "Inter_700Bold", letterSpacing: 1, textTransform: "uppercase" }}>
+                <Text style={{ fontSize: 16, color: "white", fontFamily: "Inter_700Bold", letterSpacing: 1, textTransform: "uppercase" }}>
                     Good Morning
                 </Text>
             </View>
@@ -55,7 +54,7 @@ function BottomSection() {
                 } > BST</Text>
             </Text>
 
-            <Text style={{ textTransform: "uppercase", color: "white", fontFamily: "Inter_500Medium", fontWeight: "500", letterSpacing: 1, marginTop: 10 }}>IN London, UK</Text>
+            <Text style={{ textTransform: "uppercase", color: "white", fontFamily: "Inter_500Medium", fontWeight: "500", letterSpacing: 1, marginTop: 10, }}>IN London, UK</Text>
 
             <TouchableOpacity onPress={() => { }} style={{ marginTop: 20, flexDirection: "row", alignItems: "center", backgroundColor: "white", width: 100, borderRadius: 15, paddingHorizontal: 10, paddingVertical: 3, gap: 5 }}>
                 <Text style={{ color: "black", fontSize: 16, fontFamily: "Inter_500Medium", fontWeight: "700", textTransform: "uppercase", letterSpacing: 2 }}>
