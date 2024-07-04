@@ -1,6 +1,6 @@
-import { Inter_200ExtraLight, Inter_900Black } from '@expo-google-fonts/inter'
+import { Inter_200ExtraLight, Inter_900Black, Inter_500Medium, Inter_700Bold } from '@expo-google-fonts/inter'
 import { useFonts } from 'expo-font'
-import { Image, ImageBackground, StyleSheet, Text, View } from 'react-native'
+import { Image, ImageBackground, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 
 export default function Home() {
 
@@ -14,6 +14,7 @@ export default function Home() {
     return (
         <ImageBackground source={require("../assets/app/light-bg.png")} style={{ flex: 1 }}>
             <TopSection />
+            <BottomSection></BottomSection>
         </ImageBackground>
     )
 }
@@ -38,9 +39,31 @@ function TopSection() {
 function BottomSection() {
 
     return (
-        <View>
+        <View style={style.bottomContainer}>
+            <View style={{ flexDirection: "row", alignItems: "center", gap: 5, marginBottom: 5, paddingHorizontal: 10 }}>
+                <Image source={require("../assets/app/sun.png")} />
+                <Text style={{ fontSize: 20, color: "white", fontFamily: "Inter_700Bold", letterSpacing: 1, textTransform: "uppercase" }}>
+                    Good Morning
+                </Text>
+            </View>
+            <Text>
+                <Text style={{ color: "white", fontFamily: "Inter_700Bold", fontWeight: "bold", fontSize: 64 }}>11:37</Text>
+                <Text style={
+                    {
+                        color: "white", fontSize: 12, fontFamily: "Inter_500Medium", fontWeight: "500",
+                    }
+                } > BST</Text>
+            </Text>
 
-        </View>
+            <Text style={{ textTransform: "uppercase", color: "white", fontFamily: "Inter_500Medium", fontWeight: "500", letterSpacing: 1, marginTop: 10 }}>IN London, UK</Text>
+
+            <TouchableOpacity onPress={() => { }} style={{ marginTop: 20, flexDirection: "row", alignItems: "center", backgroundColor: "white", width: 100, borderRadius: 15, paddingHorizontal: 10, paddingVertical: 3, gap: 5 }}>
+                <Text style={{ color: "black", fontSize: 16, fontFamily: "Inter_500Medium", fontWeight: "700", textTransform: "uppercase", letterSpacing: 2 }}>
+                    More
+                </Text>
+                <Image source={require("../assets/app/arrow-down.png")} />
+            </TouchableOpacity>
+        </View >
     )
 }
 
@@ -54,5 +77,9 @@ const style = StyleSheet.create({
         paddingVertical: 30,
         marginTop: 16,
         gap: 5
+    },
+    bottomContainer: {
+        flex: 1,
+        paddingHorizontal: 18,
     }
 })
