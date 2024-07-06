@@ -16,6 +16,10 @@ The "N Time Location" application is a React Native project built using Expo. It
 - Interactive UI with dynamic buttons that change the content in the third section.
 - Clean and reusable components with well-structured styles.
 
+## Screen shots
+![Time and Location Section](./assets/app/sstime.jpeg)
+
+
 ## Technologies Used
 
 - React Native
@@ -62,4 +66,4 @@ The "N Time Location" application is a React Native project built using Expo. It
 - Handling user permissions for location services.
 - Dynamically updating UI based on user interactions.
 
-## Folder Structure
+
