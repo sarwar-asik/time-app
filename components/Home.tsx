@@ -6,13 +6,14 @@ export default function Home() {
 
     let [fontLoaded] = useFonts({
         inter_font_900: Inter_900Black,
-        inter_font: Inter_200ExtraLight
+        inter_font: Inter_200ExtraLight,
+        Inter_500Medium: Inter_500Medium
     })
     if (!fontLoaded) {
         return null
     }
     return (
-        <ImageBackground source={require("../assets/app/light-bg.png")} style={{ flex: 1 }}>
+        <ImageBackground source={require("../assets/app/light-bg.png")} style={{ flex: 1, justifyContent: "space-between" }}>
             <TopSection />
             <BottomSection></BottomSection>
         </ImageBackground>
@@ -45,23 +46,26 @@ function BottomSection() {
                     Good Morning
                 </Text>
             </View>
-            <Text>
-                <Text style={{ color: "white", fontFamily: "Inter_700Bold", fontWeight: "bold", fontSize: 64 }}>11:37</Text>
-                <Text style={
-                    {
-                        color: "white", fontSize: 12, fontFamily: "Inter_500Medium", fontWeight: "500",
-                    }
-                } > BST</Text>
-            </Text>
 
-            <Text style={{ textTransform: "uppercase", color: "white", fontFamily: "Inter_500Medium", fontWeight: "500", letterSpacing: 1, marginTop: 10, }}>IN London, UK</Text>
 
-            <TouchableOpacity onPress={() => { }} style={{ marginTop: 20, flexDirection: "row", alignItems: "center", backgroundColor: "white", width: 100, borderRadius: 15, paddingHorizontal: 10, paddingVertical: 3, gap: 5 }}>
-                <Text style={{ color: "black", fontSize: 16, fontFamily: "Inter_500Medium", fontWeight: "700", textTransform: "uppercase", letterSpacing: 2 }}>
-                    More
+            <View style={{ paddingHorizontal: 18 }}>
+                <Text>
+                    <Text style={{ color: "white", fontFamily: "Inter_700Bold", fontWeight: "bold", fontSize: 64 }}>11:37</Text>
+                    <Text style={
+                        {
+                            color: "white", fontSize: 12, fontFamily: "Inter_500Medium", fontWeight: "500",
+                        }
+                    } > BST</Text>
                 </Text>
-                <Image source={require("../assets/app/arrow-down.png")} />
-            </TouchableOpacity>
+                <Text style={{ textTransform: "uppercase", color: "white", fontFamily: "Inter_500Medium", fontWeight: "500", letterSpacing: 1, marginTop: 10, }}>IN London, UK</Text>
+
+                <TouchableOpacity onPress={() => { }} style={{ marginTop: 20, flexDirection: "row", alignItems: "center", backgroundColor: "white", width: 100, borderRadius: 15, paddingHorizontal: 10, paddingVertical: 3, gap: 5 }}>
+                    <Text style={{ color: "black", fontSize: 16, fontFamily: "Inter_500Medium", fontWeight: "700", textTransform: "uppercase", letterSpacing: 2 }}>
+                        More
+                    </Text>
+                    <Image source={require("../assets/app/arrow-down.png")} />
+                </TouchableOpacity>
+            </View>
         </View >
     )
 }
@@ -79,6 +83,12 @@ const style = StyleSheet.create({
     },
     bottomContainer: {
         flex: 1,
-        paddingHorizontal: 18,
+        paddingHorizontal: 10,
+        alignItems: "baseline",
+        // backgroundColor: "red",
+        justifyContent: "flex-end",
+        // paddingVertical: 26,
+        paddingBottom: 30
+
     }
 })
