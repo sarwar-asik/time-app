@@ -1,6 +1,7 @@
 import { Inter_200ExtraLight, Inter_900Black, useFonts, } from '@expo-google-fonts/inter';
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { ImageBackground, StyleSheet, Text, View } from 'react-native';
+import Home from './components/Home';
 
 export default function App() {
   let [fontLoaded] = useFonts({
@@ -12,12 +13,8 @@ export default function App() {
   }
   return (
     <View style={styles.container}>
-      <Text>Open up the Clock App!</Text>
-      <View>
-        <Text style={{ fontFamily: "inter_font", fontSize: 30 }}>This is inter_font Font</Text>
-        <Text style={{ fontFamily: "inter_font_900", fontSize: 30 }}>This is inter_font_900 Font</Text>
-      </View>
-      <StatusBar style="auto" />
+      <Home />
+      <StatusBar style='auto' />
     </View>
   );
 }
@@ -25,8 +22,8 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    // backgroundColor: '#fff',
+    // alignItems: 'center',
+    // justifyContent: 'space-between',
   },
 });
